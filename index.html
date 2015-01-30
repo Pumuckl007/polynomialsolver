@@ -3,6 +3,13 @@
   <title>Polynomial Solver (Only does real roots)</title>
 </head>
 <body>
-  <div id="answer">Answer:</div>
+  <div>The algorithm works best when the coefficients are whole numbers. The left and right bounds are the range in which the algorithm will check. The Increment factor is the increment of the original table.</div>
+  <div>The precision is the amount of times that the algorithm loops over it's self (100 works for most problems, don't go over 5000).</div>
+  <div>The format for the polynomial is ax^n+bx^o+...+c . Note: It only solves real roots</div>
+  <div>Polynomial: <input id="polynomial"></input>   <button onClick="solve.solveButton()">Solve</button></div>
+  <div>Left Bound: <input id="min" value="-100"></input>   Right Bound: <input id="max" value="100"></input></div>
+  <div>Increment Factor <input id="increment" value="0.01"></input>   Precision: <input id="percision" value="100"></input></div>
+  <div id="answer">Answer(s):</div>
+  <div id="answers"></div>
   <script src="solve.js"></script>
 </body>
