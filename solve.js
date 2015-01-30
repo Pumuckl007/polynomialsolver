@@ -39,14 +39,14 @@ solve.parsePolynomial = function(string){
   for(var i = 0; i<splitBySing.length; i++){
     var factor = {};
     factor.negative = (splitBySing[i].split("-").length > 1);
-    factor.power = parseInt(splitBySing[i].split("^")[1], 10);
+    factor.power = parseFloat(splitBySing[i].split("^")[1], 10);
     if((splitBySing[i].split("^")[1] === "") || (splitBySing[i].indexOf("^") === -1)){
       factor.power = 1;
     }
     if(splitBySing[i].indexOf("x") === -1){
       factor.power = 0;
     }
-    factor.coeficent = parseInt(splitBySing[i].split("^")[0].replace("-", "").replace("x",""), 10);
+    factor.coeficent = parseFloat(splitBySing[i].split("^")[0].replace("-", "").replace("x",""), 10);
     if(splitBySing[i].split("^")[0].replace("-", "").replace("x","")===""){
       factor.coeficent = 1;
     }
