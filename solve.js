@@ -119,7 +119,7 @@ solve.solveButton = function(){
   }
   for(var i = 0; i<roots.length; i++){
     var div = document.createElement("div");
-    div.innerText = "X" + (i+1) + " = " + roots[i].toString();
+    div.innerHTML = "X" + (i+1) + " = " + roots[i].toString();
     answers.appendChild(div);
   }
 }
